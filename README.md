@@ -1,4 +1,3 @@
-Here's a detailed README file that you can use for uploading your project to GitHub:
 
 ---
 
