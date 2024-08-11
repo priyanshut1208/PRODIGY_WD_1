@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Calendar and Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2 class="section-title" id="calendar-title">CALENDAR</h2>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prevMonth" class="nav-button">&#9664;</button>
+                    <div class="current-month-year" id="current-month-year">August 2024</div>
+                    <button id="nextMonth" class="nav-button">&#9654;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-day">Sun</div>
+                    <div class="calendar-day">Mon</div>
+                    <div class="calendar-day">Tue</div>
+                    <div class="calendar-day">Wed</div>
+                    <div class="calendar-day">Thu</div>
+                    <div class="calendar-day">Fri</div>
+                    <div class="calendar-day">Sat</div>
+                    <div class="calendar-date">1</div>
+                    <div class="calendar-date">2</div>
+                    <div class="calendar-date">3</div>
+                    <!-- More dates... -->
+                </div>
+            </div>
+            <h2>TIME
+            </h2>
+            <div class="current-time" id="current-time">21:28</div>
+        </div>
+        <div class="center">
+            <h2 class="section-title" id="stopwatch-title">STOP WATCH</h2>
+            <div id="display">00:00:00.00</div>
+            <div class="button-group">
+                <button id="startStopButton" class="control-button">Start</button>
+                <button id="resetButton" class="control-button">Reset</button>
+                <button id="lapButton" class="control-button">Lap</button>
+            </div>
+        </div>
+        <div class="right">
+            <h2 class="section-title" id="records-title">RECORDS</h2>
+            <div id="laps">
+                <div id="lapTimesContainer"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

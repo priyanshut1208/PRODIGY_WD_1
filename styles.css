@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left,.center,.right {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    background-color: #e0f7fa;
+}
+
+.center {
+    background-color: #ffffff;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+}
+
+.right {
+    background-color: #ffecb3;
+    overflow-y: auto;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.section-title:hover {
+    color: #03a9f4;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background-color: #03a9f4;
+    transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.calendar {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.current-month-year {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-button {
+    background-color: #03a9f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day {
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.calendar-date {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-date:hover {
+    background-color: #03a9f4;
+    color: white;
+}
+
+.current-time {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#display {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.control-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s, border 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.control-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.control-button:hover::before {
+    border-color: #333;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+#startStopButton {
+    background-color: #4caf50;
+    color: white;
+}
+
+#resetButton {
+    background-color: #f44336;
+    color: white;
+}
+
+#lapButton {
+    background-color: #03a9f4;
+    color: white;
+}
+
